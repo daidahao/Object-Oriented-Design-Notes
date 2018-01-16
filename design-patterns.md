@@ -295,6 +295,26 @@ A flyweight is **an object that minimizes memory usage by sharing as much data a
 
 ## Behavioral Patterns 行为模式
 
+### Observer
+
+The Observer Pattern defines a one-to-many dependency between objects so that **when one object changes state, all of its dependents are notified and updated automatically**.
+
+![](design-patterns/observer.png)
+
+```java
+public interface Subject {
+	public void registerObserver(Observer o);
+	public void removeObserver(Observer o);
+	public void notifyObservers();
+}
+```
+
+```java
+public interface Observer {
+	public void update(float temp, float humidity, float pressure);
+}
+```
+
 ## Concurrency Patterns 并发模式
 
 ### Double-checked locking
