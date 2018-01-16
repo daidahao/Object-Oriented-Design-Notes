@@ -370,3 +370,82 @@ The Command Pattern **encapsulates a request as an object**, thereby letting you
 ### Double-checked locking
 
 volatile
+
+# Principles & Laws
+
+## Design Principles
+
+Identify the aspects of your application that vary and separate them from what stays the same.
+- Encapsulate what varies
+- Program to an interface, not to an implementation
+- Favor composition over inheritance
+
+## Liskov Substitution Principle
+
+Let $q(x)$ be a property provable about objects x of type T. Then $q(y)$ should be provable for objects y of type S where S is a subtype of T.
+
+派生类（子类）对象能够替换其基类（超类）对象被使用。
+
+- Strategy
+
+## Open-Closed Principle
+
+Classes should be open for extension, but closed for modification.
+
+- Decorator
+- Observer
+
+## Dependency Inversion Principle
+
+Depend upon abstractions. Do not depend upon concrete classes.
+
+### Guidelines
+
+- No variable should hold a reference to a concrete class.
+- No class should derive from a concrete class.
+- No method should override an implemented method of any of its base classes.
+
+### Patterns
+
+- Factory Method
+- Abstract Factory
+
+## Single Responsibility
+
+A class should have only one reason to change.
+
+## Interface Segregation Principle
+
+No client should be forced to depend on methods it does not use.
+
+## Principle of Least Knowledge (Law of Demeter)
+
+Talk only to your immediate friends.
+
+Only invoke methods that belong to:
+
+- The object itself
+- Objects passed in as a parameter to the method
+- Any object the method creates or instantiates
+- Any components of the object
+
+**Not to call methods on objects that were returned from calling other methods!!**
+
+> While the principle reduces the dependencies between objects and studies have shown this reduces software maintenance, it is also the case that applying this principle results in more “wrapper” classes being written to handle method calls to other components. This can result in increased complexity and development time as well as decreased runtime performance.
+
+### Patterns
+
+- Decorator
+
+## Composition/Aggregate Reuse Principle
+
+Favor composition over inheritance.
+
+- Strategy
+
+
+
+
+
+
+...
