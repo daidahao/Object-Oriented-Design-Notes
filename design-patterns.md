@@ -1,5 +1,7 @@
 # Design Patterns 设计模式
 
+[Head First Design Patterns Website](http://www.headfirstlabs.com/books/hfdp/)
+
 All the codes in this note comes from [bethrobson/Head-First-Design-Patterns](https://github.com/bethrobson/Head-First-Design-Patterns).
 
 ## Creational Patterns 创建模式
@@ -278,6 +280,12 @@ public class HomeTheaterFacade {
   ...
 }
 ```
+
+### Bridge
+
+The Bridge Pattern allows you **to vary the implementation and the abstraction** by placing the two in separate class hierarchies.
+
+![](design-patterns/bridge.png)
 
 ## Behavioral Patterns 行为模式
 
