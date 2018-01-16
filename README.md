@@ -5,5 +5,5 @@ Notes for Object Oriented Design Course
 ## Notes
 
 - [UML](uml.md)
-- [Design Patterns 设计模式](design-patterns.md)
+- [Design Patterns & Principles 设计模式与原则](design-patterns.md)
 - [Refactoring 重构](refactoring.md)
