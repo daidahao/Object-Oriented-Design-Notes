@@ -159,6 +159,35 @@ public class CheesePizza extends Pizza {
 4. `Pizza pizza = new CheesePizza(nyIngredientFactory);`
 5. `pizza.prepare();`
 
+### Singleton
+
+The Singleton Pattern ensures **a class has only one instance, and provides a global point of access to it**.
+
+![](design-patterns/singleton.png)
+
+#### Thread-safe singleton
+
+Double-checked locking
+
+```java
+public class Singleton {
+	private volatile static Singleton uniqueInstance;
+
+	private Singleton() {}
+
+	public static Singleton getInstance() {
+		if (uniqueInstance == null) {
+			synchronized (Singleton.class) {
+				if (uniqueInstance == null) {
+					uniqueInstance = new Singleton();
+				}
+			}
+		}
+		return uniqueInstance;
+	}
+}
+```
+
 ## Structural Patterns 结构模式
 
 ## Behavioral Patterns 行为模式
