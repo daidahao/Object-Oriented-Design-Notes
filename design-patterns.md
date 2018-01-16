@@ -4,6 +4,19 @@
 
 All the codes in this note comes from [bethrobson/Head-First-Design-Patterns](https://github.com/bethrobson/Head-First-Design-Patterns).
 
+## Information Hiding
+
+Design decisions that are likely to change independently should be secrets of separate modules
+
+### Types of Secrets
+- Algorithms (procedural abstraction)
+- Data representations (abstract data types)
+- Characteristics of a hardware device (virtual machines, hardware abstraction layers, etc.)
+  - E.g., whether a thermometer measures in Fahrenheit or Celsius
+- Where information is acquired
+  - E.g., which search engine is used
+- User interface (e.g., model-view pattern)
+
 ## Creational Patterns 创建模式
 
 ### Simple Factory
@@ -442,8 +455,6 @@ Only invoke methods that belong to:
 Favor composition over inheritance.
 
 - Strategy
-
-
 
 
 
