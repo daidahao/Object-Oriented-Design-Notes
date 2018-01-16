@@ -359,6 +359,12 @@ public interface Observer {
 }
 ```
 
+### Command
+
+The Command Pattern **encapsulates a request as an object**, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable (撤销) operations.
+
+![](design-patterns/command.png)
+
 ## Concurrency Patterns 并发模式
 
 ### Double-checked locking
