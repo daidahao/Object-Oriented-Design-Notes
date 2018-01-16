@@ -295,6 +295,50 @@ A flyweight is **an object that minimizes memory usage by sharing as much data a
 
 ## Behavioral Patterns 行为模式
 
+### Strategy
+
+The Strategy Pattern **defines a family of algorithms, encapsulates each one, and makes them interchangeable**. Strategy lets the algorithm vary independently from clients that use it.
+
+![](design-patterns/strategy.png)
+
+```java
+public abstract class Duck {
+	FlyBehavior flyBehavior;
+	QuackBehavior quackBehavior;
+
+	public Duck() {
+	}
+
+	public void setFlyBehavior(FlyBehavior fb) {
+		flyBehavior = fb;
+	}
+
+	public void setQuackBehavior(QuackBehavior qb) {
+		quackBehavior = qb;
+	}
+
+	abstract void display();
+
+	public void performFly() {
+		flyBehavior.fly();
+	}
+
+	public void performQuack() {
+		quackBehavior.quack();
+	}
+
+	public void swim() {
+		System.out.println("All ducks float, even decoys!");
+	}
+}
+```
+
+```java
+public interface FlyBehavior {
+	public void fly();
+}
+```
+
 ### Observer
 
 The Observer Pattern defines a one-to-many dependency between objects so that **when one object changes state, all of its dependents are notified and updated automatically**.
