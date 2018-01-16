@@ -190,6 +190,95 @@ public class Singleton {
 
 ## Structural Patterns 结构模式
 
+### Adapter
+
+The Adapter Pattern **converts the interface of a class into another interface the clients expect**. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
+
+#### Object Adapter
+
+![](design-patterns/adapter.png)
+
+#### Class Adapter
+
+Needs multiple inheritance, impossible in Java.
+
+![](design-patterns/class-adapter.png)
+
+```java
+public class TurkeyAdapter implements Duck {
+	Turkey turkey;
+
+	public TurkeyAdapter(Turkey turkey) {
+		this.turkey = turkey;
+	}
+
+	public void quack() {
+		turkey.gobble();
+	}
+
+	public void fly() {
+		for(int i=0; i < 5; i++) {
+			turkey.fly();
+		}
+	}
+}
+```
+
+### Facade
+
+The Facade Pattern **provides a unified interface to a set of interfaces in a subsytem**. Facade defines a higher- level interface that makes the subsystem easier to use.
+
+![](design-patterns/facade.png)
+
+```java
+public class HomeTheaterFacade {
+	Amplifier amp;
+	Tuner tuner;
+	DvdPlayer dvd;
+	CdPlayer cd;
+	Projector projector;
+	TheaterLights lights;
+	Screen screen;
+	PopcornPopper popper;
+
+	public HomeTheaterFacade(Amplifier amp,
+				 Tuner tuner,
+				 DvdPlayer dvd,
+				 CdPlayer cd,
+				 Projector projector,
+				 Screen screen,
+				 TheaterLights lights,
+				 PopcornPopper popper) {
+
+		this.amp = amp;
+		this.tuner = tuner;
+		this.dvd = dvd;
+		this.cd = cd;
+		this.projector = projector;
+		this.screen = screen;
+		this.lights = lights;
+		this.popper = popper;
+	}
+
+	public void watchMovie(String movie) {
+		System.out.println("Get ready to watch a movie...");
+		popper.on();
+		popper.pop();
+		lights.dim(10);
+		screen.down();
+		projector.on();
+		projector.wideScreenMode();
+		amp.on();
+		amp.setDvd(dvd);
+		amp.setSurroundSound();
+		amp.setVolume(5);
+		dvd.on();
+		dvd.play(movie);
+	}
+  ...
+}
+```
+
 ## Behavioral Patterns 行为模式
 
 ## Concurrency Patterns 并发模式
