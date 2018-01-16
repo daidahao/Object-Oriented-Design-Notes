@@ -287,6 +287,12 @@ The Bridge Pattern allows you **to vary the implementation and the abstraction**
 
 ![](design-patterns/bridge.png)
 
+### Flyweight
+
+A flyweight is **an object that minimizes memory usage by sharing as much data as possible with other similar objects**; it is a way to use objects in large numbers when a simple repeated representation would use an unacceptable amount of memory.
+
+![](design-patterns/flyweight.png)
+
 ## Behavioral Patterns 行为模式
 
 ## Concurrency Patterns 并发模式
