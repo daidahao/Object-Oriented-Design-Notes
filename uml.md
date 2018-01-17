@@ -122,6 +122,8 @@ Think of it as a table:
 
 ![](uml/sequence-loops.png)
 
+![](uml/operators.png)
+
 ### An Exercise
 
 ![](uml/exercise.png)
